@@ -21,18 +21,18 @@ vim.keymap.set("n", "<leader><Up>", "<cmd>resize +10<cr>", { desc = "Increase Wi
 vim.keymap.set("n", "<leader><Down>", "<cmd>resize -10<cr>", { desc = "Decrease Window Width" })
 -- Copy and paste to clipboard
 if vim.fn.has("wsl") then
-  vim.g.clipboard = {
-    name = "win_clipboard",
-    copy = {
-      ["+"] = "clip.exe",
-      ["*"] = "clip.exe",
-    },
-    paste = {
-      ["+"] = "powershell.exe Get-Clipboard",
-      ["*"] = "powershell.exe Get-Clipboard",
-    },
-    cache_enabled = 0,
-  }
+	vim.g.clipboard = {
+		name = "WslClipboard",
+		copy = {
+			["+"] = "clip.exe",
+			["*"] = "clip.exe",
+		},
+		paste = {
+			["+"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+			["*"] = 'powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+		},
+		cache_enabled = 0,
+	}
 end
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')

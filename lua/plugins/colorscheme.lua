@@ -10,7 +10,7 @@ return {
 		lazy = false,
 		opts = {
 			lualine_style = "default",
-			plugins = { "coc", "eyeliner", "nvim-web-devicons", "telescope" },
+			plugins = { "eyeliner", "nvim-web-devicons", "telescope" },
 		},
 		config = function(_, opts)
 			require("material").setup(opts)
