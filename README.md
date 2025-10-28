@@ -6,9 +6,8 @@ This is a personal Neovim configuration managed by `lazy.nvim`.
 
 1.  Clone this repository into your Neovim configuration directory (usually `~/.config/nvim`):
     ```bash
-    git clone https://github.com/your-username/your-repo.git ~/.config/nvim
+    git clone git@github.com:ddl004/nvim-config.git ~/.config/nvim
     ```
-    (Replace the URL with your repository's URL).
 
 2.  Start Neovim. `lazy.nvim` will automatically bootstrap itself and install the plugins.
 
@@ -17,7 +16,12 @@ This is a personal Neovim configuration managed by `lazy.nvim`.
 -   A recent version of [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 -   `git` must be installed for `lazy.nvim` to function.
 -   `npm` is required by `markdown-preview.nvim` for its build process.
--   You must configure `~/.tmux.conf` for `vim-tmux-navigator` to work.
+-   You must configure `~/.tmux.conf` for `vim-tmux-navigator` to work. Additionally, ensure focus events are on in your configuration file:
+
+```bash
+# Let apps (like Neovim) receive focus in/out events
+set -g focus-events on
+```
 
 ### Language Servers (LSP)
 
