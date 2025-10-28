@@ -16,6 +16,7 @@ This is a personal Neovim configuration managed by `lazy.nvim`.
 -   A recent version of [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim).
 -   `git` must be installed for `lazy.nvim` to function.
 -   `npm` is required by `markdown-preview.nvim` for its build process.
+-   [ripgrep](https://github.com/BurntSushi/ripgrep) is needed for `telescope.nvim`.
 -   You must configure `~/.tmux.conf` for `vim-tmux-navigator` to work. Additionally, ensure focus events are on in your configuration file:
 
 ```bash
