@@ -32,6 +32,10 @@ To install LSPs:
 1.  Run `:Mason` in Neovim to open the Mason user interface.
 2.  In the Mason window, you can select and install any available language servers (e.g., `lua-language-server`, `pyright`, `gopls`, etc.). `mason-lspconfig.nvim` will then automatically handle their configuration with `nvim-lspconfig`.
 
+### Treesitter
+
+Install [grammars](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#supported-languages) using `:TSInstall`.
+
 ## Plugins
 
 Here is a list of the plugins included in this configuration:
